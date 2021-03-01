@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DT2VIS | CASE</title>
+
+    <link rel='shortcut icon' type='image/x-icon' href="{{ url_for('datatone.static', filename='img/favicon.ico') }}"/>
+    <!--Vendor CSS files-->
+    <link src="../static/img/symbol">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link href="https://cdn.datatables.net/rowgroup/1.1.1/css/rowGroup.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/json-tree-viewer@0.0.1/libs/jsonTree/jsonTree.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+
+    <!--Custom CSS files-->
+    <link href="{{ url_for('datatone.static', filename='css/style.css') }}" rel="stylesheet">
+    <!--<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>-->
+    <script src="../static/js/d3.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <center><h3>DT2VIS</h3></center>
+    <br/>
+    <div class="row">
+        <div class="col-md-2">
+            <span class="input-group-btn">
+                <select class="form-control" id="datasetSelect" style="height: 30px;">
+                    <option value="olympic_medals.csv" selected="selected">Olympic Medals</option>
+                    <option value="movies-w-year.csv">Movies</option>
+                    <option value="cars-w-year.csv">Cars</option>
+                    <option value="housing.csv">Housing</option>
+                    <option value="colleges.csv" >Colleges</option>
+                    <option value="euro.csv" >Euro</option>
+                    <option value="economic.csv" >Economic</option>
+                    <option value="bill.csv" >Bill</option>
+                     <option value="happiness.csv" >Happiness</option>
+                </select>
+            </span>
+        </div>
+        <div class="col-md-6">
+            <input type="search" class="form-control display-inline" id="queryInput"placeholder="Type your query here..." style="overflow:auto;width: calc(100% - 170px);">
+            <!--<button class="btn btn-default btn-sm m-l-xs" type="button" disabled="disabled">-->
+                <!--Click to Speak-->
+            <!--</button>-->
+            <button class="btn btn-success btn-sm m-l-xs" type="button" id="queryBtn">
+                Submit
+            </button>
+        </div>
+
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-2"style="height:500px; overflow:auto; float: left">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <!--Data <strong id="datasetUrl"></strong><small class="pull-right"># Row: <strong id="rowCount"></strong>, # Col: <strong id="columnCount"></strong></small>-->
+                         Data <strong id="datasetUrl"></strong>
+                        <br>
+                        <small>#Row: <strong id="rowCount"></strong>  #Col: <strong id="columnCount"></strong></small>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p class="text-muted">Attribute Summary</p>
+                    <div class="table-responsive" id="metaDataTableContainer">
+                        <table class="table table-hover table-sm text-left">
+                            <thead>
+                            <tr class="text-muted">
+                                <th class="text-no-wrap">Attribute</th>
+                                <!--<th>Type</th>-->
+                                <!--<th>Aliases</th>-->
+                                <!--<th>Unique&nbsp;#</th>-->
+                                <th class="text-no-wrap">Domain / Range</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5"style="float: left">
+                  <div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			Main view
+		</h3>
+	</div>
+	<div  id="outputVisContainer" class="panel-body"align="center" style="border:solid 1px gray;float:left;width:100%; height:500px;">
+	</div>
+</div>
+        <!--<div id="outputVisContainer" class="main_vis"align="center" style="float:left;width:100%; height:500px;"></div>-->
+            <!--<h4 class="text-center" id="inputQueryContainer">No query executed!</h4>-->
+            <!--<br/>-->
+            <!--<div style="overflow-y: hidden;">-->
+                <!--<div id="outputVisContainer" align="center"-->
+                     <!--style="white-space: nowrap; overflow-x: auto; overflow-y: auto;">-->
+                <!--</div>-->
+            <!--</div>-->
+    </div>
+        <div class="col-md-5"style="float: left">
+            <div class="panel panel-default"style="width:767px;">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			Recommended view
+		</h3>
+	</div>
+	<div id="outanswervis" class="panel-body"align="center" style="border:solid 1px gray;float:left;width:767px; height:500px;">
+        <div class="quarter-div"id="re_0"></div>
+        <div class="quarter-div"id="re_1"></div>
+        <div class="quarter-div"id="re_2"></div>
+        <div class="quarter-div"id="re_3"></div>
+	</div>
+</div>
+
+            <!--<h4 class="text-center" id="inputQueryContainer">No query executed!</h4>-->
+            <!--<br/>-->
+            <!--<div style="overflow-y: hidden;">-->
+                <!--<div id="outputVisContainer" align="center"-->
+                     <!--style="white-space: nowrap; overflow-x: auto; overflow-y: auto;">-->
+                <!--</div>-->
+            <!--</div>-->
+    </div>
+            </div>
+    <hr>
+    <div class="row">
+          <div class="col-md-8"style="float: left;">
+              <div class="panel panel-default"style="width:1239px;">
+	               <div class="panel-heading">
+		               <h3 class="panel-title">Side view</h3>
+	               </div>
+                  <div style="border:solid 1px gray;float:left; display:flex;width:1239px;height: 400px"id="visThumbnailContainer"></div>
+	          </div>
+          </div>
+        <div class="col-md-4"style="float: left;">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+		               <h3 class="panel-title">Query history view</h3>
+                </div>
+                <div id="myCarousel" class="carousel slide"style="border:solid 1px gray;height: 400px">
+	             <!-- 轮播（Carousel）指标 -->
+	             <ol class="carousel-indicators "id="carousel-indicators"></ol>
+                <!-- 轮播（Carousel）项目 -->
+	             <div class="carousel-inner"id="carousel-inner" style="height: 400px"></div>
+	             <!-- 轮播（Carousel）导航 -->
+	             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	             </a>
+	             <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	             </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="row" style="float:left; display:flex;"id="visThumbnailContainer">-->
+
+    <!--</div>-->
+    <br/>
+    <div class="loadingModal"></div>
+</div>
+</body>
+
+<!--JS files-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap-typeahead.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/rowgroup/1.1.1/js/dataTables.rowGroup.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/json-tree-viewer@0.0.1/libs/jsonTree/jsonTree.js"></script>
+
+<script src="../static/js/global.js"></script>
+<script src="../static/js/main.js"></script>
+<script src="../static/js/ui.js"z></script>
+<script src="../static/js/utils.js"></script>
+<script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+</html>
