@@ -3,7 +3,8 @@
 This repository contains source code used for visual dialogue analysis system in the DT2VIS paper. Note that the code was tested with Python 3. Please python 3 as your test environment.
 
 ## Introduction
-DT2VIS takes a natural language query about a given dataset as input and outputs a focus+context answer, and conducts users to explore
+DT2VIS takes a natural language query about a given dataset as input and outputs a focus+context answer, and conducts users to explore. The workflow of the system is as follow.
+![](https://github.com/jiangqicd/DT2VIS/blob/main/pipline.png)
 
 ## **Install Dependencies**
 The DT2VIS code has a few dependencies that can be installed using the requirement.txt file,
