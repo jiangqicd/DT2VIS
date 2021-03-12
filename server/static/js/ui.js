@@ -661,5 +661,5 @@ var dataset = $(globalConfig.datasetSelect).val();
 }
 $(document).ready(function() {
     initialize();
-//     $(globalConfig.queryInput).val("show me medals for hockey and skating by country")
+    $(globalConfig.queryInput).val("what is the mean of cost?")
 });
