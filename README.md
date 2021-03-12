@@ -10,7 +10,7 @@ The DT2VIS code has a few dependencies that can be installed using the requireme
 In addition, the system also needs stanford-parser.jar and stanford-parser-models.jar.
 
 ## Web Demo
-For convenience, we provide a app (server/app.py) that runs the visual dialogue analysis system, Data2vis. We also provide [DT2VIS's project website.](http://dt2vis.godoorsun.org:45186/)
+For convenience, we provide a app (server/app.py) that runs the visual dialogue analysis system, DT2VIS. We also provide [DT2VIS's project website.](http://dt2vis.godoorsun.org:45186/)
 
 ## Contact
 If you have any questions, feel free to open an issue or contact [Guodao Sun](guodao@zjut.edu.cn).
