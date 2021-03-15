@@ -22,6 +22,7 @@ def find_extremum_render(x,y,x_name,y_name,query,operator,answer):
     line.add_yaxis(
         y_name,
         y_axis=y,
+        label_opts=opts.LabelOpts(is_show=False),
         symbol_size='100%',
         markpoint_opts=opts.MarkPointOpts(
             data=makepoint,
@@ -35,6 +36,8 @@ def find_extremum_render(x,y,x_name,y_name,query,operator,answer):
     )
 
     line.set_global_opts(
+        datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                       opts.DataZoomOpts(type_="inside")],
         yaxis_opts=opts.AxisOpts(min_=int(min(y)-(max(y)-min(y))/10),name=y_name,axislabel_opts=opts.LabelOpts(font_size="100%"),name_textstyle_opts=opts.TextStyleOpts(font_size="100%")),
         legend_opts=opts.LegendOpts(is_show=False),
         xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=40,font_size='100%'),name=x_name,name_textstyle_opts=opts.TextStyleOpts(font_size="100%")),

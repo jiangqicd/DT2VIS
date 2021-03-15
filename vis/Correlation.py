@@ -15,7 +15,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l1_1.add_xaxis(data[0])
         l1_1.add_yaxis("",data[1])
         l1_1.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0]
             ),
@@ -26,7 +26,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -55,7 +55,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l1_1.add_xaxis(data[0])
         l1_1.add_yaxis("",data[1])
         l1_1.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -69,7 +69,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -85,7 +85,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l1_2.add_xaxis(data[0])
         l1_2.add_yaxis("",data[2])
         l1_2.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -116,7 +116,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l2_1.add_xaxis(data[1])
         l2_1.add_yaxis("",data[2])
         l2_1.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -130,7 +130,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -174,7 +174,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l1_1.add_xaxis(data[0])
         l1_1.add_yaxis("",data[1])
         l1_1.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -188,7 +188,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -204,7 +204,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l1_2.add_xaxis(data[0])
         l1_2.add_yaxis("",data[2])
         l1_2.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -218,7 +218,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -234,7 +234,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l2_1.add_xaxis(data[0])
         l2_1.add_yaxis("",data[3])
         l2_1.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[0],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -248,7 +248,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -265,7 +265,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         l2_2.add_xaxis(data[1])
         l2_2.add_yaxis("",data[2])
         l2_2.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[1],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -279,7 +279,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -320,7 +320,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         r1_1.add_yaxis("",data[3]
         )
         r1_1.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[1],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -334,7 +334,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -352,7 +352,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
         r1_2.add_yaxis("",data[3]
         )
         r1_2.set_global_opts(
-            datazoom_opts=opts.DataZoomOpts(),
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=attributes[2],
                 axislabel_opts=opts.LabelOpts(rotate=50, interval=0),
@@ -366,7 +366,7 @@ def find_correlation_render(attributes,data, pearsonr,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串

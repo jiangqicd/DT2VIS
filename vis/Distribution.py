@@ -53,6 +53,8 @@ def find_distribution_render(x,Y,x_name,query,table_path,answer):
                           data=[opts.MarkLineItem(type_="average",name="平均值")]
                       ))
     bar.set_global_opts(
+        datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                       opts.DataZoomOpts(type_="inside")],
         yaxis_opts=opts.AxisOpts( axislabel_opts=opts.LabelOpts(font_size="100%"),
                                  name_textstyle_opts=opts.TextStyleOpts(font_size="100%")),
         xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=40, interval=0, font_size='100%'),
@@ -61,7 +63,7 @@ def find_distribution_render(x,Y,x_name,query,table_path,answer):
             graphic_item=opts.GraphicItem(
                 left="center",
                 top="bottom",
-                z=100,
+
             ),
             graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                 # 可以通过jsCode添加js代码，也可以直接用字符串

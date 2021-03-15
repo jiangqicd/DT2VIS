@@ -85,10 +85,6 @@ def find_value_render(query_filter,x_label,x,result,Data,query,table_path,answer
             axispointer_opts=opts.AxisPointerOpts(is_show=False),
             axistick_opts=opts.AxisTickOpts(is_show=False)
         ),
-        title_opts=opts.TitleOpts(
-            subtitle="\n"+"When the search condition is "+query_filter,
-            pos_left='center'
-        ),
         graphic_opts=[opts.GraphicText(
             graphic_item=opts.GraphicItem(
                 left="center",

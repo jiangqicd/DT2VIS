@@ -35,12 +35,14 @@ def find_proportion_render(x,y,z,part_name,main_name,query,table_path,answer):
     bar.add_yaxis('', y_axis=y_part, stack='stack1', label_opts=opts.LabelOpts(position="insideTop"),itemstyle_opts=opts.ItemStyleOpts(color=colorList[2]),tooltip_opts=opts.TooltipOpts(formatter=part_name+':{c}')),
     bar.add_yaxis('', y_axis=y_main, stack='stack1',label_opts=opts.LabelOpts(is_show=False),color="gray",tooltip_opts=opts.TooltipOpts(formatter=main_name+':{c}'))
     bar.set_global_opts(
+        datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                       opts.DataZoomOpts(type_="inside")],
         legend_opts=opts.LegendOpts(is_show=False),
         graphic_opts=[opts.GraphicText(
             graphic_item=opts.GraphicItem(
                 left="center",
                 top="bottom",
-                z=100,
+
             ),
             graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                 # 可以通过jsCode添加js代码，也可以直接用字符串

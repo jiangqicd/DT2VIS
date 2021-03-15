@@ -53,13 +53,14 @@ def find_aggregation_render(x,y,flag,query,table_path,answer,y_name):
                       )
         bar.add_yaxis('', y_axis=y2, stack='stack1')
         bar.set_global_opts(
+        datazoom_opts=[opts.DataZoomOpts(range_start=10,range_end=90), opts.DataZoomOpts(type_="inside")],
         xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=40,font_size='100%'),name_textstyle_opts=opts.TextStyleOpts(font_size="100%")),
         yaxis_opts=opts.AxisOpts(min_=int(min(y)-(max(y)-min(y))/10),name=y_name,axislabel_opts=opts.LabelOpts(font_size="100%"),name_textstyle_opts=opts.TextStyleOpts(font_size="100%")),
             graphic_opts=[opts.GraphicText(
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -94,11 +95,12 @@ def find_aggregation_render(x,y,flag,query,table_path,answer,y_name):
             r=str(x[i])
             bar.add_yaxis('',Y, stack='stack1', label_opts=opts.LabelOpts(position="inside",formatter=r+":{c}"),tooltip_opts=opts.TooltipOpts(is_show=False))
         bar.set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10,range_end=90,orient="vertical"), opts.DataZoomOpts(type_="inside")],
             graphic_opts=[opts.GraphicText(
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串

@@ -11,7 +11,6 @@ def TREND_render(x,y,z,y_up,y_down,max_index,min_index,x_name,y_name,query,answe
             .add_yaxis(
             series_name="increase_value",
             y_axis=y_up,
-            stack="GDP",
             markpoint_opts=opts.MarkPointOpts(
             data=[opts.MarkPointItem(type_='max')]
             ),
@@ -24,6 +23,8 @@ def TREND_render(x,y,z,y_up,y_down,max_index,min_index,x_name,y_name,query,answe
             data=[opts.MarkPointItem(type_='max')]
         ),)
             .set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                           opts.DataZoomOpts(type_="inside")],
             yaxis_opts=opts.AxisOpts(
                 name=y_name,
                 type_="value",
@@ -36,7 +37,7 @@ def TREND_render(x,y,z,y_up,y_down,max_index,min_index,x_name,y_name,query,answe
             graphic_item=opts.GraphicItem(
               left="center",
               top="bottom",
-              z=100,
+
         ),
           graphic_textstyle_opts=opts.GraphicTextStyleOpts(
             # 可以通过jsCode添加js代码，也可以直接用字符串

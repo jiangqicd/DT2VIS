@@ -14,6 +14,7 @@ def find_difference_render(data,X,query,table_path,answer):
         bar1.add_yaxis("",data[0][1],label_opts=opts.LabelOpts(position="insideLeft"))
         bar1.reversal_axis()
         bar1.set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10,range_end=90,orient="vertical"), opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 position="top"
             ),
@@ -24,7 +25,7 @@ def find_difference_render(data,X,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -41,6 +42,8 @@ def find_difference_render(data,X,query,table_path,answer):
         bar2.add_yaxis("",data[1][1],label_opts=opts.LabelOpts(position="insideRight"))
         bar2.reversal_axis()
         bar2.set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90, orient="vertical"),
+                           opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 position="top",
                 is_inverse=True
@@ -53,7 +56,7 @@ def find_difference_render(data,X,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -95,6 +98,7 @@ def find_difference_render(data,X,query,table_path,answer):
         for i in range(len(data)):
             radar.add(
                 series_name=data[i][0],
+                label_opts=opts.LabelOpts(is_show=False),
                 data=[data[i][1]],
                 linestyle_opts=opts.LineStyleOpts(
                     color=colorList[i],
@@ -129,8 +133,10 @@ def find_difference_render(data,X,query,table_path,answer):
         bar3=Bar()
         bar3.add_xaxis(X[1])
         for i in range(len(data)):
-            bar3.add_yaxis(data[i][0],data[i][1])
+            bar3.add_yaxis(data[i][0],data[i][1],label_opts=opts.LabelOpts(is_show=False))
         bar3.set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                           opts.DataZoomOpts(type_="inside")],
             xaxis_opts=opts.AxisOpts(
                 name=X[0]
             ),
@@ -138,7 +144,6 @@ def find_difference_render(data,X,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -180,7 +185,7 @@ def find_difference_render(data,X,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -195,6 +200,7 @@ def find_difference_render(data,X,query,table_path,answer):
         for i in range(len(data)):
             radar.add(
                 series_name=data[i][0],
+                label_opts=opts.LabelOpts(is_show=False),
                 data=[data[i][1]],
                 linestyle_opts=opts.LineStyleOpts(
                     color=colorList[i],
@@ -213,8 +219,10 @@ def find_difference_render(data,X,query,table_path,answer):
         bar = Bar()
         bar.add_xaxis(X[1])
         for i in range(len(data)):
-          bar.add_yaxis(data[i][0], data[i][1])
+          bar.add_yaxis(data[i][0], data[i][1],label_opts=opts.LabelOpts(is_show=False))
         bar.set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                           opts.DataZoomOpts(type_="inside")],
           xaxis_opts=opts.AxisOpts(
             name=X[0]
           ),
@@ -222,7 +230,7 @@ def find_difference_render(data,X,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
+
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
@@ -247,8 +255,10 @@ def find_difference_render(data,X,query,table_path,answer):
         bar = Bar()
         bar.add_xaxis(X[1])
         for i in range(len(data)):
-          bar.add_yaxis(data[i][0], data[i][1])
+          bar.add_yaxis(data[i][0], data[i][1],label_opts=opts.LabelOpts(is_show=False))
         bar.set_global_opts(
+            datazoom_opts=[opts.DataZoomOpts(range_start=10, range_end=90),
+                           opts.DataZoomOpts(type_="inside")],
           xaxis_opts=opts.AxisOpts(
             name=X[0]
           ),
@@ -256,7 +266,6 @@ def find_difference_render(data,X,query,table_path,answer):
                 graphic_item=opts.GraphicItem(
                     left="center",
                     top="bottom",
-                    z=100,
                 ),
                 graphic_textstyle_opts=opts.GraphicTextStyleOpts(
                     # 可以通过jsCode添加js代码，也可以直接用字符串
