@@ -181,7 +181,7 @@ class TaskGenie:
             # print(self.parse_instance.task_keyword_map)
             for dep_index, dep in enumerate(dependencies[0]):
                 # print(dep_index)
-                # print(dep)
+                print(dep)
                 # print(dep[0][0])
                 # print(dep[2][0])
                 # print(dep[1])

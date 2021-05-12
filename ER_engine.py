@@ -185,7 +185,7 @@ def user_recommend_v1(attributes,task,table_path,feedback,TTM):
                 index_now=i
             elif Feedback[2].lower()==tasks[i].lower():
                 index_next=i
-        TTM[index_now][index_next]+=0.2#0.2为可调节系数
+        TTM[index_now][index_next]+=0.05#0.2为可调节系数
         max=0
         for i in range(len(TTM[index_next])):
             if i!=index_next:
@@ -197,7 +197,7 @@ def user_recommend_v1(attributes,task,table_path,feedback,TTM):
                 sum+=max/TTM[index_next][i]
         for i in range(len(TTM[index_now])):
             if i!=index_next:
-                TTM[index_now][i]-=0.2*(max/TTM[index_next][i]/sum)
+                TTM[index_now][i]-=0.05*(max/TTM[index_next][i]/sum)
                 # TTM[index_now][i]-=0.2*(1-TTM[index_next][i]/(1-TTM[index_next][index_next]))/3
         #如果概率矩阵纯在负数，进行标准化
         for i in TTM:
@@ -214,7 +214,7 @@ def user_recommend_v1(attributes,task,table_path,feedback,TTM):
                     index_now = i
                 elif Feedback[j+2].lower() == tasks[i].lower():
                     index_next = i
-            TTM[index_now][index_next] -= 0.2  # 0.2为可调节系数
+            TTM[index_now][index_next] -= 0.05  # 0.2为可调节系数
             max = 0
             for i in range(len(TTM[index_next])):
                 if i != index_next:
@@ -226,7 +226,7 @@ def user_recommend_v1(attributes,task,table_path,feedback,TTM):
                     sum += max / TTM[index_next][i]
             for i in range(len(TTM[index_now])):
                 if i != index_next:
-                    TTM[index_now][i] += 0.2 * (max / TTM[index_next][i] / sum)
+                    TTM[index_now][i] += 0.05 * (max / TTM[index_next][i] / sum)
                     # TTM[index_now][i]-=0.2*(1-TTM[index_next][i]/(1-TTM[index_next][index_next]))/3
             # 如果概率矩阵纯在负数，进行标准化
             for i in TTM:

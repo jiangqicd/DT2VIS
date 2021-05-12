@@ -103,8 +103,11 @@ class Parse:
         self.query_ngrams = self.query_genie_instance.get_query_ngrams(' '.join(self.query_tokens))
         self.dependencies = self.query_genie_instance.create_dependency_tree(self.query_processed)
         helpers.cond_print("Processed Query: " + self.query_processed, self.verbose)
+        # print("tokens:")
         # print(self.query_tokens)
+        # print("N:")
         # print(self.query_ngrams)
+        # print("dependencies:")
         # print(self.dependencies)
 
 

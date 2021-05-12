@@ -4,6 +4,7 @@ from pyecharts import globals
 from pyecharts.globals import ThemeType
 import operator
 import json
+import pandas as pd
 def find_distribution_render(x,Y,x_name,query,table_path,answer):
     Max=0
     y=[]

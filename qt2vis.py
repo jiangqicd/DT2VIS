@@ -1203,7 +1203,7 @@ if __name__ == '__main__':
   #   print(option.get("attributes"))
   # a=parse("what is the distribution of cost?","case2.csv")
   # function("what is the value of GDP in US?",table_path_test)
-  function("What's the value of health in 15?","2015.csv")
+  function("What is the distribution of Deaths by state?","COVID19_state.csv")
   # print(parse("what is the average of HappinessScore in WesternEurope ?","2015.csv"))
   # a=parse("what is the trend of food ?","case2.csv")
   # function(query_find_extremum,table_path_test)
