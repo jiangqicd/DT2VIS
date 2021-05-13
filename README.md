@@ -3,7 +3,7 @@
 This repository contains source code used for visual dialogue analysis system in the DT2VIS paper. Note that the code was tested with Python 3. Please python 3 as your test environment.
 
 ## Web Demo
-For convenience, we provide a app (server/app.py) that runs the visual dialogue analysis system, DT2VIS. We also provide [DT2VIS's project website](http://dt2vis.godoorsun.org:45186/) and [DT2VIS's alternate website.](http://dt2vis2.godoorsun.org:45186/) Please clear the browser cache before using DT2VIS!
+For convenience, we provide a app (server/app.py) that runs the visual dialogue analysis system, DT2VIS. We also provide [DT2VIS's project website](http://dt2vis2.godoorsun.org:45186/) and [DT2VIS's alternate website.](http://dt2vis.godoorsun.org:45186/) Please clear the browser cache before using DT2VIS!
 
 Overview of the online system is shown as follow.
 ![](https://github.com/jiangqicd/DT2VIS/blob/main/overview.png)
