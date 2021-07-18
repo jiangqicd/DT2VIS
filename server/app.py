@@ -3,11 +3,9 @@ import os
 import json
 from flask import Flask, jsonify, request, Blueprint, render_template, abort, send_from_directory
 from jinja2 import TemplateNotFound
-from qt2vis import parse
-from input_recommendation_engine import genQSents
-from ER_engine import user_recommend,user_recommend_v1
-# Import our Example Applications
-from server.applications.datatone import datatone_routes
+from dt2vis.dt2vis import parse
+from autocompletion.autocompletion import genQSents
+from queryrecommendation.algorithm import user_recommend
 # Initialize the app
 app = Flask(__name__)
 app.jinja_env.auto_reload = True
@@ -45,15 +43,11 @@ def vis():
     table_path=request.form['table_path']
     table_path='./assets/data/'+table_path
     feedback=request.form['Feedback']
-    print(feedback)
-    print(query)
-    print(table_path)
     query_history=parse(query,table_path)
     option=query_history.get("option")
     attributes=query_history.get("attributes")
     task=query_history.get("task")
-    # recommend=user_recommend(attributes,task,table_path,feedback)
-    recommend,TTM=user_recommend_v1(attributes,task,table_path,feedback,TTM)
+    recommend,TTM=user_recommend(attributes,task,table_path,feedback,TTM)
     result={"option":option,"recommend":recommend,"task":task}
     return json.dumps(result)
 @app.route('/input_association', methods=['POST'])
@@ -67,7 +61,6 @@ def Input_association():
     print(query)
     print(table_path)
     data=genQSents(query,table_path)
-    # data=["1","2"]
     res={"association":data}
     print(json.dumps(res))
     return json.dumps(res)
@@ -164,7 +157,7 @@ def setAttributeDataType():
 @app.route('/',methods=['GET'])
 def application_homepage():
     try:
-        return render_template('datatone.html')
+        return render_template('dt2vis.html')
     except TemplateNotFound:
         abort(404)
 
@@ -179,5 +172,4 @@ def get_dataset_meta():
     return jsonify(output)
 
 if __name__ == "__main__":
-    app.register_blueprint(datatone_routes.datatone_bp, url_prefix='/datatone')
     app.run(host='0.0.0.0', debug=True, threaded=True, port=7001)

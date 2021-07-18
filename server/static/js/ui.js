@@ -469,6 +469,18 @@ $(globalConfig.datasetSelect).change(function() {
     emptyQueryResponseContainers();
     emptyDatasetContainers();
     var dataset = $(this).val();
+    console.log("111111111111")
+    console.log(dataset)
+    if(dataset=="bill.csv")
+    {$(globalConfig.queryInput).val("what is the mean of cost?")}
+    else if(dataset=="Cars-w-year.csv")
+    {$(globalConfig.queryInput).val("what is the distribution of Horsepower?")}
+    else if(dataset=="colleges.csv")
+    {$(globalConfig.queryInput).val("what is the distribution of SATAverage?")}
+    else if(dataset=="happiness.csv")
+    {$(globalConfig.queryInput).val("what is the distribution of HappinessScore?")}
+    else if(dataset=="Movies-w-year.csv")
+    {$(globalConfig.queryInput).val("what is the distribution of IMDBRating?")}
     configureDatabase(dataset);
 });
 function re_recommend_vis(vis_recommend,task_now) {
@@ -661,5 +673,6 @@ var dataset = $(globalConfig.datasetSelect).val();
 }
 $(document).ready(function() {
     initialize();
-    $(globalConfig.queryInput).val("what is the mean of cost?")
+    $(globalConfig.queryInput).val("what is the mean of cost?");
+
 });

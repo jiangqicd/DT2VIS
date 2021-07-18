@@ -1,0 +1,80 @@
+Model,MPG,Cylinders,Displacement,Horsepower,Weight,Acceleration,Origin
+volkswagen 1131 deluxe sedan,26,4,97,46,1835,20.5,Europe
+volkswagen super beetle,26,4,97,46,1950,21,Europe
+volkswagen rabbit custom diesel,43.1,4,90,48,1985,21.5,Europe
+vw rabbit c (diesel),44.3,4,90,48,2085,21.7,Europe
+vw dasher (diesel),43.4,4,90,48,2335,23.7,Europe
+fiat 128,29,4,68,49,1867,19.5,Europe
+toyota corona,31,4,76,52,1649,16.5,Japan
+chevrolet chevette,29,4,85,52,2035,22.2,US
+mazda glc deluxe,32.8,4,78,52,1985,19.4,Japan
+vw pickup,44,4,97,52,2130,24.6,Europe
+honda civic cvcc,33,4,91,53,1795,17.5,Japan
+honda civic,33,4,91,53,1795,17.4,Japan
+volkswagen type 3,23,4,97,54,2254,23.5,Europe
+renault 5 gtl,36,4,79,58,1825,18.6,Europe
+toyota starlet,39.1,4,79,58,1755,16.9,Japan
+volkswagen model 111,27,4,97,60,1834,19,Europe
+chevrolet woody,24.5,4,98,60,2164,22.1,US
+toyota corolla tercel,38.1,4,89,60,1968,18.8,Japan
+honda civic 1300,35.1,4,81,60,1760,16.1,Japan
+datsun 710,32,4,83,61,2003,19,Japan
+vokswagen rabbit,29.8,4,89,62,1845,15.3,Europe
+toyota tercel,37.7,4,89,62,2050,17.3,Japan
+plymouth horizon 4,34.7,4,105,63,2215,14.9,US
+plymouth horizon miser,38,4,105,63,2125,14.7,US
+plymouth champ,39,4,86,64,1875,16.4,US
+toyota corolla 1200,31,4,71,65,1773,19,Japan
+maxda glc deluxe,34.1,4,86,65,1975,15.2,Japan
+datsun 210,31.8,4,85,65,2020,19.2,Japan
+datsun 310,37.2,4,86,65,2019,16.4,Japan
+mazda glc,46.6,4,86,65,2110,17.9,Japan
+datsun 210 mpg,37,4,85,65,1975,19.4,Japan
+ford escort 4w,34.4,4,98,65,2045,16.2,US
+ford escort 2h,29.9,4,98,65,2380,20.7,US
+ford fiesta,36.1,4,98,66,1800,14.4,US
+datsun b210,31,4,79,67,1950,19,Japan
+volkswagen dasher,26,4,79,67,1963,15.5,Europe
+fiat x1.9,31,4,79,67,2000,16,Europe
+subaru dl,30,4,97,67,1985,16.4,Japan
+audi 5000s (diesel),36.4,5,121,67,2950,19.9,Europe
+mercedes-benz 240d,30,4,146,67,3250,21.8,Europe
+honda civic 1500 gl,44.6,4,91,67,1850,13.8,Japan
+subaru,32.3,4,97,67,2065,17.8,Japan
+honda civic (auto),32,4,91,67,1965,15.7,Japan
+datsun 310 gx,38,4,91,67,1995,16.2,Japan
+honda accord cvcc,31.5,4,98,68,2045,18.5,Japan
+honda accord lx,29.5,4,98,68,2135,16.6,Japan
+mazda glc 4,34.1,4,91,68,1985,16,Japan
+mazda glc custom l,37,4,91,68,2025,18.2,Japan
+mazda glc custom,31,4,91,68,1970,17.6,Japan
+datsun 1200,35,4,72,69,1613,18,Japan
+renault 12 (sw),26,4,96,69,2189,18,Europe
+fiat strada custom,37.3,4,91,69,2130,14.7,Europe
+peugeot 304,30,4,79,70,2074,19.5,Europe
+plymouth cricket,26,4,91,70,1955,20.5,US
+volkswagen rabbit,29,4,90,70,1937,14,Europe
+vw rabbit,29,4,90,70,1937,14.2,Europe
+datsun b-210,32,4,85,70,1990,17,Japan
+datsun f-10 hatchback,33.5,4,85,70,1945,16.8,Japan
+datsun b210 gx,39.4,4,85,70,2070,18.6,Japan
+plymouth horizon,34.2,4,105,70,2200,13.2,US
+plymouth horizon tc3,34.5,4,105,70,2150,14.9,US
+mercury lynx l,36,4,98,70,2125,17.3,US
+toyota corolla,34,4,108,70,2245,16.9,Japan
+volkswagen scirocco,31.5,4,89,71,1990,14.9,Europe
+vw rabbit custom,31.9,4,89,71,1925,14,Europe
+peugeot 504,27.2,4,141,71,3190,24.8,Europe
+chevrolet vega (sw),22,4,140,72,2408,19,US
+chevrolet vega,21,4,140,72,2401,19.5,US
+mercury monarch,15,6,250,72,3432,21,US
+ford maverick,15,6,250,72,3158,19.5,US
+ford pinto,26.5,4,140,72,2565,13.6,US
+honda accord,32.4,4,107,72,2290,17,Japan
+volkswagen jetta,33,4,105,74,2190,14.2,Europe
+mazda 626,31.6,4,120,74,2635,18.3,Japan
+volkswagen rabbit l,36,4,105,74,1980,15.3,Europe
+opel manta,24,4,116,75,2158,15.5,Europe
+dodge colt,28,4,90,75,2125,14.5,US
+fiat 124 tc,26,4,116,75,2246,14,Europe
+toyota corolla liftback,26,4,97,75,2265,18.2,Japan

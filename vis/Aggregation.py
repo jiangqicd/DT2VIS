@@ -7,9 +7,6 @@ import json
 from pyecharts.commons.utils import JsCode
 import numpy as np
 def find_aggregation_render(x,y,flag,query,table_path,answer,y_name):
-    # flag="sum"
-    # x = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-    # y = [11, 11, 15, 13, 12, 13, 10]
     colorList = ['#f36c6c', '#e6cf4e', '#20d180', '#0093ff']
     x_sum=["Sum"]
     Sum=[]
