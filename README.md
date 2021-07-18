@@ -19,4 +19,4 @@ The DT2VIS code has a few dependencies that can be installed using the requireme
 In addition, the system also needs stanford-parser.jar and stanford-parser-models.jar.
 
 ## Contact
-If you have any questions, feel free to open an issue or contact [Guodao Sun](http://godoorsun.org).
+The current version is a development version. If you have any questions, feel free to open an issue or contact [Guodao Sun](http://godoorsun.org).
